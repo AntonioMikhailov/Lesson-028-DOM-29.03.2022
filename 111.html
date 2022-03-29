@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+.box {
+  width: 200px;
+  height: 200px;
+  margin:0px 20px 20px 0px;
+  
+  background-color: rgb(144, 144, 144);
+}
+.active {
+  background-color: rgb(197, 69, 69);
+}
+</style>
+<body>
+  <div class="box" style="width:500px">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+
+  <script>
+   const wrapper = document.createElement('wrapper'); // создаем
+   const div = document.createElement('div'); // создаем
+   const box = document.querySelectorAll('.box');
+    
+   document.body.prepend(wrapper);
+   div.innerHTML = 'BOX' // содержимое
+   wrapper.prepend(div); // Вставлям внутрь wrapper
+box[2].remove(div)
+
+    // const box = document.querySelector('.box');
+    // box.style.width = 120 +'px'; // так
+    // box.style.width = '220px'; // или так
+    // console.dir(box);
+
+    // box.forEach((item ,i) => { 
+    //   item.addEventListener('click', ()=> { 
+    //    box[i].classList.toggle('active');
+       
+    //   }); 
+    //  });
+  </script>
+
+</body>
+</html>
